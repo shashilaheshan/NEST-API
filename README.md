@@ -96,4 +96,28 @@ curl -X POST http://localhost:3000/books/seed-dummy
 
 ## Database
 
-The application connects to MongoDB at `mongodb://localhost:27017/booksdb`. Make sure MongoDB is running before starting the application. 
+The application connects to MongoDB using the `MONGODB_URI` environment variable. Make sure MongoDB is running before starting the application.
+
+## Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `PORT` | Application port | `3000` |
+| `NODE_ENV` | Environment mode | `development` |
+| `MONGODB_URI` | MongoDB connection string | `mongodb://localhost:27017/booksdb` |
+| `APP_NAME` | Application name | `Books API` |
+| `APP_VERSION` | Application version | `1.0.0` |
+
+## Different Environments
+
+- **Development**: Use `.env` file
+- **Production**: Use `.env.production` file or environment variables
+
+To run with a specific environment file:
+```bash
+# Development (default)
+npm run start:dev
+
+# Production
+NODE_ENV=production npm run start:prod
+``` 
