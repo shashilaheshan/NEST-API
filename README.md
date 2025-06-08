@@ -13,6 +13,27 @@ A simple NestJS API for managing books with MongoDB.
 npm install
 ```
 
+## Environment Configuration
+
+1. Copy the example environment file:
+```bash
+cp .env.example .env
+```
+
+2. Update the `.env` file with your configuration:
+```env
+# Application Configuration
+PORT=3000
+NODE_ENV=development
+
+# Database Configuration
+MONGODB_URI=mongodb://localhost:27017/booksdb
+
+# Application Settings
+APP_NAME=Books API
+APP_VERSION=1.0.0
+```
+
 ## Running the App
 
 ```bash
